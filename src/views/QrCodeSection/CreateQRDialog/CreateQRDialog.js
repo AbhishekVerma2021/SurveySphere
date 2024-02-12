@@ -113,7 +113,7 @@ const CreateQRDialog = (props) => {
           <div className="headerScanme">
             <img src={headerPng} className='scaneMeImage' alt="" />
             <div className="subHeaderScanMe">
-              Your reviews are precious to us!!D
+              Your reviews are precious to us!!
             </div>
           </div>
           {/* <div style={{ background: 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)', padding: '10px', display: 'inline-block',  }}>
@@ -125,7 +125,7 @@ const CreateQRDialog = (props) => {
               <QRCode
                 size={200}
                 style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                value={`https://51a3-103-129-235-102.ngrok-free.app/feedback?business_id=${business_id}`}
+                value={`https://remi-back.onrender.com/feedback?business_id=${business_id}`}
                 level='M'
                 fgColor="#ffbb00"
                 bgColor="transparent"
@@ -156,7 +156,7 @@ const CreateQRDialog = (props) => {
                   <img className='connectionIcon glassdorIcon' src={glassdorIcon} alt="" />
                 </div>
                 <div className="connectionUsernameContainer">
-                  @glassdorIcon_203
+                  Glassdoor
                 </div>
               </div>
               <div className="hrDividerContainer">
@@ -168,7 +168,7 @@ const CreateQRDialog = (props) => {
 
                 </div>
                 <div className="connectionUsernameContainer">
-                  @googleMaps
+                  Google
                 </div>
               </div>
               <div className="hrDividerContainer">
@@ -180,7 +180,7 @@ const CreateQRDialog = (props) => {
 
                 </div>
                 <div className="connectionUsernameContainer">
-                  @instagram_101
+                  Instagram
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@ const CreateQRDialog = (props) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => { window.open(`https://51a3-103-129-235-102.ngrok-free.app/feedback?business_id=${business_id}`, "_blank")}}>
+        <Button onClick={() => { window.open(`https://remi-back.onrender.com/feedback?business_id=${business_id}`, "_blank")}}>
           Preview
         </Button>
         <Button onClick={() => handlePdfDownload()}>

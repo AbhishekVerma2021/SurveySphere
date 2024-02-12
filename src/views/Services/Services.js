@@ -1,7 +1,7 @@
 // axiosInstance.js
 import axios from 'axios';
 
-const baseURL = 'https://51a3-103-129-235-102.ngrok-free.app/api'; // replace with your API base URL
+const baseURL = 'https://remi-back.onrender.com/api'; // replace with your API base URL
 
 const Axios = axios.create({
   baseURL,

@@ -100,6 +100,9 @@
 .instructionText {
   background-color: #ffbb00;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
   color: white;
   border-radius: 10px;
   position: relative;
@@ -219,5 +222,22 @@
 @media only screen and (max-width: 500px) {
   .headerScanme>img {
     height: 110px;
+  }
+  .instructionText {
+    width: 90%;
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .headerScanme>img {
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .headerScanme>img {
+    height: 90px;
   }
 }

@@ -30,7 +30,7 @@ const PricingCard = (props) => {
     setDisableButton(priceId === activePlanDataId);
     console.log(activePlanDataId)
   }, [activePlanDataId, priceId]);
-
+  // console.log(activePlanDataId,",", priceId)
   return (
     <div className="pricing-card">
       <div className="card-header">
@@ -38,7 +38,7 @@ const PricingCard = (props) => {
         <div className='hotelCountForplan'>Try our plan for {trialDays} days for free.</div>
         <p className="price" style={{ backgroundColor: priceColor }}>
           <span>
-            {price}
+          ₹{price}
           </span>
           <span className="frequency">/{interval}</span>
         </p>
@@ -51,6 +51,7 @@ const PricingCard = (props) => {
           </li>
         ))}
       </ul> */}
+      {/* {JSON.stringify(activePlanDataId===priceId)} */}
       <Button variant='outlined' disabled={activePlanDataId && activePlanDataId.length > 0} sx={{ color: activePlanDataId && activePlanDataId === priceId ? `Red !important` : `${priceColor} !important`, border: `2px solid ${priceColor}`, width: '150px' }} className="start-trial-btn" onClick={() => setOpenEditDialog(true)}>{activePlanDataId === priceId ? "Active Plan" : "Select Plan"}</Button>
       <ViewPlanDialog open={openEditDialog} planName={planName} _id={_id} productId={productId} priceId={priceId} metaId={metaId} setOpenEditDialog={setOpenEditDialog} />
     </div>

@@ -133,7 +133,7 @@ const Plans = (props) => {
           })}
         </div> : <div className='noPlansView'>
           <img src={registerHotel} alt="Hotel Not Registerd!!" />
-          <div>Please register your hotel details before accessing plans</div>
+          <div>Please register your business details before accessing plans</div>
         </div>}
 
       </Grid>

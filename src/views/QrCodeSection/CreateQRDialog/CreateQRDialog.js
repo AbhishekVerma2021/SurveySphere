@@ -13,6 +13,8 @@ import hotelImage from '../../../Images/hotel.png';
 // import QRCodeVue3 from 'qrcode-vue3'
 import QRCode from "react-qr-code";
 
+import info from '../../../info/info';
+const { backendUrl } = info;
 
 const CreateQRDialog = (props) => {
   const {
@@ -125,7 +127,7 @@ const CreateQRDialog = (props) => {
               <QRCode
                 size={200}
                 style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                value={`https://remi-back.onrender.com/feedback?business_id=${business_id}`}
+                value={`${backendUrl}/feedback?business_id=${business_id}`}
                 level='M'
                 fgColor="#ffbb00"
                 bgColor="transparent"
@@ -188,7 +190,7 @@ const CreateQRDialog = (props) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => { window.open(`https://remi-back.onrender.com/feedback?business_id=${business_id}`, "_blank")}}>
+        <Button onClick={() => { window.open(`https://remi-back.onrender.com/feedback?business_id=${business_id}`, "_blank") }}>
           Preview
         </Button>
         <Button onClick={() => handlePdfDownload()}>

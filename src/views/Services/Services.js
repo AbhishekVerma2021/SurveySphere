@@ -1,10 +1,11 @@
 // axiosInstance.js
 import axios from 'axios';
-
-const baseURL = 'https://remi-back.onrender.com/api'; // replace with your API base URL
+import info from 'info/info';
+const { backendUrl }  = info;
+const baseURL = `${backendUrl}/api`; // replace with your API base URL
 
 const Axios = axios.create({
-  baseURL,
+  baseURL,         
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',

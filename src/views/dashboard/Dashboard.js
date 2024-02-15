@@ -156,7 +156,7 @@ const Dashboard = (props) => {
                 color="dark"
                 icon={<MoneyIcon/>}
                 title="Current Active Plan"
-                count={activePlan}
+                count={activePlan ? activePlan : "None"}
                 percentage={{
                   color: "success",
                   amount: '12/10/2024',

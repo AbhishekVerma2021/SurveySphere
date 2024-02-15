@@ -336,7 +336,7 @@ const EditBusinessDetailsDialog = (props) => {
             value={formData.aiDescription}
             onChange={handleInputChange}
           />
-          <TextField
+          {/* <TextField
             margin="dense"
             id="num-of-rooms"
             label="Number of Rooms"
@@ -345,7 +345,7 @@ const EditBusinessDetailsDialog = (props) => {
             name="numOfRooms"
             value={formData.numOfRooms}
             onChange={handleInputChange}
-          />
+          /> */}
           <TextField
             margin="dense"
             id="slogan"

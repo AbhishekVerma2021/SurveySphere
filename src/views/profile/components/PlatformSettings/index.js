@@ -237,7 +237,7 @@ const PlatformSettings = (props) => {
           <Button onClick={() => handleSubmit()} variant="contained" sx={{ color: 'white !important', margin: '10px 0px' }}>SUBMIT</Button>
         </div>
       </MDBox> : <MDBox pt={1} pb={2} px={2} lineHeight={1.25}>
-            Please <Link style={{ color: "blue" }} to="/hotelDetails">register</Link> your hotel.
+            Please <Link style={{ color: "blue" }} to="/businessDetails">register</Link> your hotel.
         </MDBox>}
     </Card>
   );

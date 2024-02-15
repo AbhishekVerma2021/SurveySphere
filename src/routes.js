@@ -55,6 +55,8 @@ import QrCodeSection from "views/QrCodeSection";
 import { Money, QrCode } from "@mui/icons-material";
 import SurveyCard from "views/SurveyCard";
 import ProtectedRoute from 'components/ProtectedRoute';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import WhatsappView from 'views/WhatsappView';
 const routes = [
   {
     type: "collapse",
@@ -62,7 +64,7 @@ const routes = [
     key: "dashboard",
     icon: <Icon fontSize="small">dashboard</Icon>,
     route: "/dashboard",
-    component: <ProtectedRoute Component={Dashboard} componentPath='/dashboard'/> ,
+    component: <ProtectedRoute Component={Dashboard} componentPath='/dashboard' />,
   },
   {
     type: "collapse",
@@ -71,6 +73,14 @@ const routes = [
     icon: <Icon fontSize="small">person</Icon>,
     route: "/profile",
     component: <ProtectedRoute Component={Profile} componentPath='/profile' />,
+  },
+  {
+    type: "collapse",
+    name: "Whatsapp",
+    key: "whatsapp",
+    icon: <WhatsAppIcon />,
+    route: "/whatsapp",
+    component: <ProtectedRoute Component={WhatsappView} componentPath='/whatsapp' />,
   },
   // {
   //   type: "collapse",
@@ -82,7 +92,7 @@ const routes = [
   // },
   {
     type: "collapse",
-    name: "Review's",
+    name: "Reviews",
     key: "reviews",
     icon: <SentimentVerySatisfiedIcon />,
     route: "/allReviews",
@@ -90,11 +100,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Hotel Details",
-    key: "Hotel Detail",
+    name: "Business Details",
+    key: "Business Details",
     icon: <CorporateFareIcon />,
-    route: "/hotelDetails",
-    component: <ProtectedRoute Component={HotelDetails} componentPath='/hotelDetails' />,
+    route: "/businessDetails",
+    component: <ProtectedRoute Component={HotelDetails} componentPath='/businessDetails' />,
   },
   {
     type: "collapse",
@@ -124,9 +134,9 @@ const routes = [
     type: "collapse",
     name: "Logout",
     key: "logout",
-    icon: <LogoutIcon onClick={() => {localStorage.clear()}} />,
+    icon: <LogoutIcon onClick={() => { localStorage.clear() }} />,
     route: "/authentication/sign-in",
-    component: <SignIn/>,
+    component: <SignIn />,
   },
   // {
   //   type: "collapse",

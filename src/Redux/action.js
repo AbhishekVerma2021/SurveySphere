@@ -355,3 +355,18 @@ export const getDashBoardCountData = () => {
       });
   };
 };
+
+
+export const handleWhatsappMessage = (phoneNo) => {
+  console.log(phoneNo);
+  return (dispatch, getState) => {
+    const { hotelDetailsRedux } = getState();
+    console.log(hotelDetailsRedux)
+    const { name, business_id } = hotelDetailsRedux;
+    console.log(name,business_id)
+    const message = `We value your feedback at ${name} and would love to hear your thoughts. 
+    Could you spare a few moments to complete our quick survey? Your input will help us improve and serve you better.
+     Thank you for your time and support! Here's the link: https://remi-back.onrender.com/feedback?business_id=${business_id}`
+    window.open(`https://wa.me/91${phoneNo}?text=${message}`, '_blank');
+  };
+};

@@ -1,0 +1,19 @@
+.whatsappImageContainer > img {
+  height: 50vh;
+}
+
+.whatsappViewContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.whatsappInputContainer {
+  width: 40%;
+}
+
+/* #phoneNumber {
+  width: 40%;
+} */

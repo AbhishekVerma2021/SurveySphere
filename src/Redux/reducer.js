@@ -255,6 +255,32 @@ const reducer = (state = initialState, action) => {
         ...state,
         isUserLoggedIn: false,
         isFullPageLoading: false,
+        activeUserDetails: {},
+        ussToken: '',
+        refreshToken: '',
+        // isUserLoggedIn: false,
+        allPlansData: [],
+        sessionId: undefined,
+        // isFullPageLoading: false,
+        activeHotelFlag: false,
+        hotelDetailsRedux: {
+      
+          // facebook_id 
+          // instagram_id 
+          // x_id 
+          // glassdoor_id 
+          //place_id
+        },
+        allReviewsData: [],
+        emailVerifyFlag: false,
+        activePlanName: "",
+        // plansData: [],
+        billingUrl: "",
+        barGraphData: [],
+        lineGraph1Data: [],
+        lineGraph2Data: [],
+        activePlanDataId: "",
+        dashBoardCountData: {},
       }
     }
 

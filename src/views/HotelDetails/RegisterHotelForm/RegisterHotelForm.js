@@ -260,14 +260,14 @@ const RegisterHotelForm = ({ open, setOpenAddBuisness, handleHotelDetails }) => 
 
   return (
     <Dialog open={open} onClose={handleClose}>
-      <DialogTitle>Enter Hotel Details</DialogTitle>
+      <DialogTitle>Enter business Details</DialogTitle>
       <DialogContent>
         <form onSubmit={handleSubmit} autoComplete="off">
           <TextField
             autoFocus
             margin="dense"
             id="hotelName"
-            label="Hotel Name"
+            label="Business Name"
             type="text"
             fullWidth
             name="hotelName"
@@ -311,7 +311,7 @@ const RegisterHotelForm = ({ open, setOpenAddBuisness, handleHotelDetails }) => 
             value={formData.aiDescription}
             onChange={handleInputChange}
           />
-          <TextField
+          {/* <TextField
             margin="dense"
             id="numOfRooms"
             label="Number of Rooms"
@@ -320,7 +320,7 @@ const RegisterHotelForm = ({ open, setOpenAddBuisness, handleHotelDetails }) => 
             name="numOfRooms"
             value={formData.numOfRooms}
             onChange={handleInputChange}
-          />
+          /> */}
           <TextField
             margin="dense"
             id="slogan"

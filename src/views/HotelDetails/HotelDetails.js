@@ -94,7 +94,7 @@ const HotelDetails = (props) => {
             }}
           >
             <MDTypography variant="h6" color="white">
-              Your Hotel Details
+              Your business Details
             </MDTypography>
             <div>
               {!change && <IconButton onClick={() => setOpenEditBuisness(true)}>
@@ -104,7 +104,7 @@ const HotelDetails = (props) => {
               </IconButton>}
 
               {!change && <IconButton onClick={() => setOpenDeleteModal(true)}>
-                <Tooltip title='Edit hotel details'>
+                <Tooltip title='Edit business details'>
                   <DeleteIcon sx={{ color: 'white !important' }} />
                 </Tooltip>
               </IconButton>}
@@ -116,7 +116,7 @@ const HotelDetails = (props) => {
               <img src={addIcon} alt="" />
             </div>
             <div className="enterDetails">
-              Enter Details of your Hotels
+              Enter Details of your business
             </div>
           </div> :
             <div className="hoteldetailsMasterContainer">
@@ -143,17 +143,17 @@ const HotelDetails = (props) => {
                 <div className='dividerContainer'>
                   <hr className='dividerHr' />
                 </div>
-                <div className="locationContainer">
+                {/* <div className="locationContainer">
                   <div className="locationLabel">
                     No. of Rooms:
                   </div>
                   <div className="locationText">
                     {room}
                   </div>
-                </div>
-                <div className='dividerContainer'>
+                </div> */}
+                {/* <div className='dividerContainer'>
                   <hr className='dividerHr' />
-                </div>
+                </div> */}
                 <div className="descriptionContainer">
                   <div className="descriptionLabel">
                     Description:
@@ -196,7 +196,7 @@ const HotelDetails = (props) => {
           Warning!!!
         </DialogTitle>
         <DialogContent>
-          Are you sure you want to delete hotel details? Your reviews will be removed if done so!!!
+          Are you sure you want to delete business details? Your reviews will be removed if done so!!!
         </DialogContent>
         <DialogActions>
           <Button variant='contained' sx={{ color: 'white !important', backgroundColor: 'red' }} onClick={() => handleDeleteHotelFromRedux()}>

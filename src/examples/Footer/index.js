@@ -43,7 +43,7 @@ function Footer({ company, links }) {
     ));
 
   return (
-    <>Made with ❤️ by Abhishek Verma</>
+    <>© Copyright </>
 
     // <MDBox
     //   width="100%"

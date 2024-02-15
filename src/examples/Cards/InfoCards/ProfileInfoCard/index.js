@@ -115,7 +115,7 @@ function ProfileInfoCard({ title, description, info, social, hotelDetailsRedux, 
         <MDBox mb={2} lineHeight={1}>
           {hotelDetailsRedux && (Object.keys(hotelDetailsRedux).length > 0) ? <MDTypography variant="button" color="text" fontWeight="light">
             {description}
-          </MDTypography> : <MDTypography variant="button" color="text" fontWeight="bold">Please <Link style={{ color: 'blue' }} to="/hotelDetails">register</Link> your hotel</MDTypography>}
+          </MDTypography> : <MDTypography variant="button" color="text" fontWeight="bold">Please <Link style={{ color: 'blue' }} to="/businessDetails">register</Link> your hotel</MDTypography>}
         </MDBox>
         <MDBox opacity={0.3}>
           <Divider />

@@ -32,7 +32,7 @@ function Footer({ light }) {
   const { size } = typography;
 
   return (
-    <>Made with ❤️ by Abhishek Verma</>
+    <>© Copyright</>
     // <MDBox position="absolute" width="100%" bottom={0} py={4}>
     //   <Container>
     //     <MDBox

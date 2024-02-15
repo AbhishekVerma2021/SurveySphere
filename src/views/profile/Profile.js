@@ -94,7 +94,7 @@ const Profile = (props) => {
             <Grid item xs={12} md={6} xl={4} sx={{ display: "flex" }}>
               <Divider orientation="vertical" sx={{ ml: -2, mr: 1 }} />
               <ProfileInfoCard
-                title="Hotel Description"
+                title="Business Description"
                 description={description}
                 info={{
                   fullName: name,

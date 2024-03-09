@@ -16,7 +16,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import hotelImg from '../../Images/hotelImg.png';
 import hotel2Img from '../../Images/hotel2Img.png';
 import hotel3Img from '../../Images/hotel3Img.png';
-
+import AddIcon from '@mui/icons-material/Add';
 const HotelDetails = (props) => {
 
 
@@ -106,6 +106,13 @@ const HotelDetails = (props) => {
               {!change && <IconButton onClick={() => setOpenDeleteModal(true)}>
                 <Tooltip title='Edit business details'>
                   <DeleteIcon sx={{ color: 'white !important' }} />
+                </Tooltip>
+              </IconButton>}
+              {change && <IconButton onClick={() => setOpenAddBuisness(true)}>
+                <Tooltip title='Create business'>
+                  {/* <IconButton sx={{ backgroundColor: '#1c6fda' }}> */}
+                    <AddIcon sx={{ color: 'white !important' }} />
+                  {/* </IconButton> */}
                 </Tooltip>
               </IconButton>}
             </div>

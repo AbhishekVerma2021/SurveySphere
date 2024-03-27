@@ -1,3 +1,3 @@
 export default {
-  "backendUrl": 'https://remi-back.onrender.com'
+  "backendUrl": 'https://rime-323336461dab.herokuapp.com'
 }

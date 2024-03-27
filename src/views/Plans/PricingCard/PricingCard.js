@@ -52,7 +52,10 @@ const PricingCard = (props) => {
         ))}
       </ul> */}
       {/* {JSON.stringify(activePlanDataId===priceId)} */}
-      <Button variant='outlined' disabled={activePlanDataId && activePlanDataId.length > 0} sx={{ color: activePlanDataId && activePlanDataId === priceId ? `Red !important` : `${priceColor} !important`, border: `2px solid ${priceColor}`, width: '150px' }} className="start-trial-btn" onClick={() => setOpenEditDialog(true)}>{activePlanDataId === priceId ? "Active Plan" : "Select Plan"}</Button>
+      <Button variant='outlined' disabled={activePlanDataId && activePlanDataId.length > 0} sx={{ color: activePlanDataId && activePlanDataId === priceId ? `Red !important`
+      : `${priceColor} !important`, border: `2px solid ${priceColor}`, width: '150px' }}
+      className="start-trial-btn" onClick={() => setOpenEditDialog(true)}>
+        {activePlanDataId === priceId ? "Active Plan" : "Select Plan"}</Button>
       <ViewPlanDialog open={openEditDialog} planName={planName} _id={_id} productId={productId} priceId={priceId} metaId={metaId} setOpenEditDialog={setOpenEditDialog} />
     </div>
   );

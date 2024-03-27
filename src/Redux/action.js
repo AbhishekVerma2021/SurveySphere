@@ -202,7 +202,7 @@ export const deleteHotelData = () => {
 export const getPlansData = () => {
   return (dispatch) => {
     dispatch({ type: GET_PLANS_DATA_PENDING });
-    Axios.get('/admin/getplans')
+    Axios.get('/payment/listPlans')
       .then(res => {
         dispatch({ type: GET_PLANS_DATA_FULFILLED, payload: res.data });
       })

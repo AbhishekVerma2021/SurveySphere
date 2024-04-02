@@ -218,7 +218,7 @@ const CreateQRDialog = (props) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => { window.open(`https://remi-back.onrender.com/feedback?business_id=${business_id}`, "_blank") }}>
+        <Button onClick={() => { window.open(`https://rime-323336461dab.herokuapp.com/feedback?business_id=${business_id}`, "_blank") }}>
           Preview
         </Button>
         <Button onClick={() => handlePdfDownload()}>

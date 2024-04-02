@@ -6,10 +6,12 @@ import html2canvas from 'html2canvas';;
 import jsPDF from 'jspdf';
 import headerPng from '../../../Images/Untitled.png';
 import qrCodeImage from '../../../Images/qr_download.png';
-import glassdorIcon from '../../../Images/glassdoor.png';
+import facebookIcon from '../../../Images/facebook.png';
 import mapsIcon from '../../../Images/maps.png';
 import instagramIcon from '../../../Images/instagram.png';
 import hotelImage from '../../../Images/hotel.png';
+import rimeLogo from '../../../Images/rimeLogo.png';
+
 // import QRCodeVue3 from 'qrcode-vue3'
 import QRCode from "react-qr-code";
 
@@ -113,7 +115,7 @@ const CreateQRDialog = (props) => {
       <DialogContent>
         <DialogContentText className='downloaderPart' sx={{ border: '2px solid red' }}>
           <div className="headerScanme">
-            <img src={headerPng} className='scaneMeImage' alt="" />
+            <div className="scanmeHeader">SCAN ME</div>
             <div className="subHeaderScanMe">
               Your reviews are precious to us!!
             </div>
@@ -129,12 +131,38 @@ const CreateQRDialog = (props) => {
                 style={{ height: "auto", maxWidth: "100%", width: "100%" }}
                 value={`${backendUrl}/feedback?business_id=${business_id}`}
                 level='M'
-                fgColor="#ffbb00"
+                fgColor="#5b09e1"
                 bgColor="transparent"
               />
             </button>
           </div>
-          <div className="instructionCOntainer">
+          <div className='rimeLogo'>
+            <div className="hrContainer" id='hr1'>
+              <hr />
+            </div>
+            <img src={rimeLogo} height={80} alt="" />
+            <div className="hrContainer" id='hr2'>
+              <hr />
+            </div>
+          </div>
+          <div className="companyLogoCOntainer">
+            <div className="logoDet">
+              <img className='connectionIcon' src={facebookIcon} alt="" />
+              <div className="logoname">Facebook</div>
+            </div>
+            <div className="logoDet">
+              <img className='connectionIcon' src={mapsIcon} alt="" />
+              <div className="logoname">Google Maps</div>
+            </div>
+            <div className="logoDet">
+              <img className='connectionIcon' src={instagramIcon} alt="" />
+              <div className="logoname">Instagram</div>
+            </div>
+          </div>
+          <div className="companyWebsite">
+            Visit: <span>www.rime.co.in</span>
+          </div>
+          {/* <div className="instructionCOntainer">
             <div className="instructionText">
               <span>
                 Scan the QR to provide your feedback
@@ -147,8 +175,8 @@ const CreateQRDialog = (props) => {
             <div className="usernameText">
               @{name}
             </div>
-          </div>
-          <div className="bottomScanMeContainer">
+          </div> */}
+          {/* <div className="bottomScanMeContainer">
             <div className="leftLogoContainer">
               <img src={hotelImage} className='hotelImageOnQr' alt="Rating" />
             </div>
@@ -186,7 +214,7 @@ const CreateQRDialog = (props) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </DialogContentText>
       </DialogContent>
       <DialogActions>

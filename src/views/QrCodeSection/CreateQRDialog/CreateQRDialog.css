@@ -13,17 +13,25 @@
 .headerScanme {
   display: flex;
   justify-content: center;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scanmeHeader {
+  font-size: 100px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 120px;
+  color: #000000;
 }
 
 .subHeaderScanMe {
-  font-family: "Pacifico", cursive;
-  color: #ffbb00;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
   font-size: 20px;
   text-align: right;
-  position: absolute;
-  bottom: 0;
-  right: 20px;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* right: 20px; */
   font-weight: 700;
 }
 
@@ -98,7 +106,7 @@
 }
 
 .instructionText {
-  background-color: #ffbb00;
+  background-color: #5b09e1;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -109,16 +117,58 @@
 }
 
 .arrowPoineter {
-  /* border: 50px solid #ffbb00; */
+  /* border: 50px solid #5b09e1; */
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: 20px solid #ffbb00;
+  border-bottom: 20px solid #5b09e1;
   position: absolute;
   left: 45%;
   top: -20px
     /* border-radius: 50% 50% 0 0; */
+}
+.hrContainer {
+  width: 30%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.hrContainer > hr {
+  width: 100%;
+  height: 5px;
+  background-color: #878ba3;
+  border: none;
+}
+
+#hr1 {
+  padding-right: 20px;
+}
+
+#hr1>hr {
+  border-radius: 10px 0 0 10px;
+}
+
+#hr2 {
+  padding-left: 20px;
+}
+
+#hr2>hr {
+  border-radius: 0 10px 10px 0;
+}
+
+.rimeLogo {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid; */
+  margin-bottom: 10px;
+}
+
+.companyLogoCOntainer {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .usernameContainer {
@@ -183,11 +233,29 @@
 }
 
 .connectionIcon {
-  height: 30px;
+  height: 40px;
 }
 
 .connectionUsernameContainer {
   color: white;
+}
+
+.logoDet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.companyWebsite {
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.companyWebsite > span {
+  color: black;
+  padding-left: 10px;
 }
 
 .glassdorIcon {
@@ -198,21 +266,16 @@
   /* filter: invert(100); */
 }
 
-@media only screen and (max-width: 700px) {
-  .headerScanme>img {
-    height: 140px;
-  }
-}
 
-@media only screen and (max-width: 630px) {
-  .headerScanme>img {
-    height: 130px;
+@media only screen and (max-width: 580px) {
+  .scanmeHeader {
+    font-size: 90px;
   }
 }
 
 @media only screen and (max-width: 540px) {
-  .headerScanme>img {
-    height: 120px;
+  .scanmeHeader {
+    font-size: 80px;
   }
   .subHeaderScanMe {
     font-size: 17px;
@@ -220,19 +283,34 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .headerScanme>img {
-    height: 110px;
+  .scanmeHeader {
+    font-size: 70px;
+  }
+  .subHeaderScanMe {
+    font-size: 15px;
   }
   .instructionText {
     width: 90%;
     font-size: 15px;
     padding: 10px;
   }
+
+  .QRCodeImage {
+    height: 216px !important;
+    width: 216px !important;
+  }
+  .QRCodeImage > svg {
+    height: 200px !important;
+    max-width: 200px !important;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-  .headerScanme>img {
-    height: 100px;
+  .scanmeHeader {
+    font-size: 60px;
+  }
+  .subHeaderScanMe {
+    font-size: 12px;
   }
 }
 
